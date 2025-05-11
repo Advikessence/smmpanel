@@ -1,0 +1,655 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NepalSMM - Social Media Marketing Panel</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>NepalSMM</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#home" class="active">Home</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#pricing">Pricing</a></li>
+                    <li><a href="#features">Features</a></li>
+                    <li><a href="#faq">FAQ</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="#" id="login-btn" class="btn btn-primary">Login</a></li>
+                    <li><a href="#" id="register-btn" class="btn btn-secondary">Register</a></li>
+                </ul>
+                <div class="menu-toggle">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h2>Boost Your Social Media Presence with NepalSMM</h2>
+                <p>The most affordable and reliable SMM panel in Nepal. Get instant likes, followers, views and more for all major social media platforms.</p>
+                <div class="cta-buttons">
+                    <a href="#order" class="btn btn-primary">Try Our Services</a>
+                    <a href="#services" class="btn btn-secondary">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="stats" class="stats-section">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <h3>10,000+</h3>
+                    <p>Happy Customers</p>
+                </div>
+                <div class="stat-item">
+                    <h3>250+</h3>
+                    <p>Services</p>
+                </div>
+                <div class="stat-item">
+                    <h3>1M+</h3>
+                    <p>Orders Completed</p>
+                </div>
+                <div class="stat-item">
+                    <h3>24/7</h3>
+                    <p>Customer Support</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="order" class="quick-order">
+        <div class="container">
+            <h2>Quick Order Without Registration</h2>
+            <div class="order-form">
+                <div class="form-group">
+                    <label for="category">Category</label>
+                    <select id="category" required>
+                        <option value="">Select Category</option>
+                        <!-- Categories will be loaded from API -->
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="service">Service</label>
+                    <select id="service" required>
+                        <option value="">Select Service</option>
+                        <!-- Services will be loaded from API based on category -->
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="link">Link</label>
+                    <input type="text" id="link" placeholder="Enter your link" required>
+                </div>
+                <div class="form-group">
+                    <label for="quantity">Quantity</label>
+                    <input type="number" id="quantity" min="1" value="100" required>
+                    <div class="price-info">
+                        <p>Min: <span id="min-quantity">0</span></p>
+                        <p>Max: <span id="max-quantity">0</span></p>
+                        <p>Price: $<span id="price">0.00</span></p>
+                    </div>
+                </div>
+                <button type="submit" id="place-order" class="btn btn-primary">Place Order</button>
+            </div>
+        </div>
+    </section>
+
+    <section id="services" class="services">
+        <div class="container">
+            <h2>Our SMM Services</h2>
+            <p>We offer a wide range of social media marketing services to help your brand grow and stand out from the competition.</p>
+            
+            <div class="services-grid">
+                <!-- Instagram Services -->
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fab fa-instagram"></i>
+                    </div>
+                    <h3>Instagram Services</h3>
+                    <p>Boost your Instagram presence with followers, likes, comments, views and more.</p>
+                    <ul>
+                        <li>Followers (High Quality)</li>
+                        <li>Likes (Instant)</li>
+                        <li>Comments (Custom)</li>
+                        <li>Views (Real)</li>
+                    </ul>
+                    <a href="#" class="view-services" data-category="instagram">View Services</a>
+                </div>
+
+                <!-- Facebook Services -->
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fab fa-facebook"></i>
+                    </div>
+                    <h3>Facebook Services</h3>
+                    <p>Enhance your Facebook presence with our premium marketing services.</p>
+                    <ul>
+                        <li>Page Likes (Real)</li>
+                        <li>Post Likes (Fast)</li>
+                        <li>Video Views (HQ)</li>
+                        <li>Group Members (Active)</li>
+                    </ul>
+                    <a href="#" class="view-services" data-category="facebook">View Services</a>
+                </div>
+
+                <!-- YouTube Services -->
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fab fa-youtube"></i>
+                    </div>
+                    <h3>YouTube Services</h3>
+                    <p>Grow your YouTube channel with our comprehensive marketing solutions.</p>
+                    <ul>
+                        <li>Subscribers (Non-Drop)</li>
+                        <li>Views (Retention)</li>
+                        <li>Likes (Genuine)</li>
+                        <li>Comments (Real)</li>
+                    </ul>
+                    <a href="#" class="view-services" data-category="youtube">View Services</a>
+                </div>
+
+                <!-- TikTok Services -->
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fab fa-tiktok"></i>
+                    </div>
+                    <h3>TikTok Services</h3>
+                    <p>Boost your TikTok presence and go viral with our marketing services.</p>
+                    <ul>
+                        <li>Followers (Active)</li>
+                        <li>Likes (Fast)</li>
+                        <li>Views (High Retention)</li>
+                        <li>Shares (Organic)</li>
+                    </ul>
+                    <a href="#" class="view-services" data-category="tiktok">View Services</a>
+                </div>
+
+                <!-- Twitter Services -->
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fab fa-twitter"></i>
+                    </div>
+                    <h3>Twitter Services</h3>
+                    <p>Strengthen your Twitter presence with our premium marketing packages.</p>
+                    <ul>
+                        <li>Followers (Quality)</li>
+                        <li>Retweets (Fast)</li>
+                        <li>Likes (Real)</li>
+                        <li>Comments (Genuine)</li>
+                    </ul>
+                    <a href="#" class="view-services" data-category="twitter">View Services</a>
+                </div>
+
+                <!-- Telegram Services -->
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fab fa-telegram"></i>
+                    </div>
+                    <h3>Telegram Services</h3>
+                    <p>Grow your Telegram channels and groups with our effective solutions.</p>
+                    <ul>
+                        <li>Channel Members (Real)</li>
+                        <li>Post Views (Fast)</li>
+                        <li>Group Members (Active)</li>
+                        <li>Reactions (Genuine)</li>
+                    </ul>
+                    <a href="#" class="view-services" data-category="telegram">View Services</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="how-it-works" class="how-it-works">
+        <div class="container">
+            <h2>How It Works</h2>
+            <p>Get started with our SMM panel in just a few simple steps.</p>
+            
+            <div class="steps">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <h3>Create Account</h3>
+                    <p>Register for a free account on our SMM panel platform.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <h3>Add Funds</h3>
+                    <p>Add funds to your account using NPR or cryptocurrency.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <h3>Select Service</h3>
+                    <p>Choose from our wide range of SMM services.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">4</div>
+                    <h3>Get Results</h3>
+                    <p>Watch as your order is processed and delivered quickly.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="features" class="features">
+        <div class="container">
+            <h2>Why Choose NepalSMM?</h2>
+            <p>We offer the best SMM services with unmatched features and benefits.</p>
+            
+            <div class="features-grid">
+                <div class="feature">
+                    <div class="feature-icon">
+                        <i class="fas fa-bolt"></i>
+                    </div>
+                    <h3>Instant Delivery</h3>
+                    <p>Most of our services start delivering within minutes after placing an order.</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>Secure Payments</h3>
+                    <p>All payment methods are secure with encryption and data protection.</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">
+                        <i class="fas fa-tags"></i>
+                    </div>
+                    <h3>Competitive Pricing</h3>
+                    <p>We offer the most affordable rates in the market without compromising quality.</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">
+                        <i class="fas fa-headset"></i>
+                    </div>
+                    <h3>24/7 Support</h3>
+                    <p>Our customer support team is available round the clock to assist you.</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>Order Tracking</h3>
+                    <p>Track your orders in real-time with our advanced monitoring system.</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <h3>API Support</h3>
+                    <p>Integrate our services with your system using our powerful API.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="pricing" class="pricing">
+        <div class="container">
+            <h2>Affordable Packages</h2>
+            <p>We offer various packages to suit your needs and budget.</p>
+            
+            <div class="packages">
+                <div class="package">
+                    <h3>Starter Package</h3>
+                    <div class="price">500</div>
+                    <p>Perfect for beginners</p>
+                    <ul>
+                        <li>500 Instagram Followers</li>
+                        <li>1000 Instagram Likes</li>
+                        <li>100 Facebook Page Likes</li>
+                        <li>1000 YouTube Views</li>
+                        <li>Premium Support</li>
+                    </ul>
+                    <a href="#" class="btn btn-secondary">Get Started</a>
+                </div>
+                <div class="package popular">
+                    <div class="popular-tag">MOST POPULAR</div>
+                    <h3>Premium Package</h3>
+                    <div class="price">1,500</div>
+                    <p>Great for growing accounts</p>
+                    <ul>
+                        <li>2000 Instagram Followers</li>
+                        <li>5000 Instagram Likes</li>
+                        <li>500 Facebook Page Likes</li>
+                        <li>5000 YouTube Views</li>
+                        <li>Premium Support</li>
+                    </ul>
+                    <a href="#" class="btn btn-primary">Get Started</a>
+                </div>
+                <div class="package">
+                    <h3>Business Package</h3>
+                    <div class="price">5,000</div>
+                    <p>For professional usage</p>
+                    <ul>
+                        <li>10,000 Instagram Followers</li>
+                        <li>20,000 Instagram Likes</li>
+                        <li>2,000 Facebook Page Likes</li>
+                        <li>20,000 YouTube Views</li>
+                        <li>Priority Support</li>
+                    </ul>
+                    <a href="#" class="btn btn-secondary">Get Started</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="payment" class="payment">
+        <div class="container">
+            <h2>Payment Methods</h2>
+            <p>We support various payment methods including Nepali Rupee options and cryptocurrencies.</p>
+            
+            <h3>Accepted Payment Methods</h3>
+            <div class="payment-methods">
+                <div class="payment-group">
+                    <h4>Nepali Payment Options</h4>
+                    <div class="payment-icons">
+                        <div class="payment-icon"><img src="https://upload.wikimedia.org/wikipedia/commons/3/3c/Esewa_logo.png" alt="eSewa"></div>
+                        <div class="payment-icon"><img src="https://play-lh.googleusercontent.com/yXqBI2wTHaLhXFHrpZhhnLTwMUJ5QtXcmM66f4j0CSgHxkDj0Svty6QOdDEJvXQgLgI" alt="Khalti"></div>
+                        <div class="payment-icon"><img src="https://play-lh.googleusercontent.com/j3eRG3JiWPTcNIcl5OZKn9GlUu_2a1VwqwQl6yBhCbm4qIGMQ1dS4XM6twkUTPwCEg" alt="ConnectIPS"></div>
+                        <div class="payment-icon"><img src="https://play-lh.googleusercontent.com/vbW-_iilUzZ9AZkK_CDDOQ27GLQiQeWA38OVfariRYIQwJJCpFQY3Lj-JMnwJ9QfkQ" alt="IME Pay"></div>
+                    </div>
+                </div>
+                <div class="payment-group">
+                    <h4>Cryptocurrency Options</h4>
+                    <div class="payment-icons">
+                        <div class="payment-icon"><img src="https://bitcoin.org/img/icons/opengraph.png?1688471970" alt="Bitcoin"></div>
+                        <div class="payment-icon"><img src="https://ethereum.org/static/a183661dd70e0e5c70689a0ec95ef0ba/13c43/eth-diamond-purple.png" alt="Ethereum"></div>
+                        <div class="payment-icon"><img src="https://cryptologos.cc/logos/tether-usdt-logo.png" alt="USDT"></div>
+                        <div class="payment-icon"><img src="https://litecoin.org/img/litecoin.png" alt="Litecoin"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="dashboard" class="dashboard-preview">
+        <div class="container">
+            <h2>Dashboard Preview</h2>
+            <p>Take a look at our user-friendly dashboard designed for an optimal experience.</p>
+            <div class="dashboard-image">
+                <img src="https://i.imgur.com/vTstxJE.png" alt="Dashboard Preview">
+            </div>
+        </div>
+    </section>
+
+    <section id="testimonials" class="testimonials">
+        <div class="container">
+            <h2>What Our Customers Say</h2>
+            <p>Don't just take our word for it - hear from some of our satisfied customers.</p>
+            
+            <div class="testimonial-slider">
+                <div class="testimonial">
+                    <div class="testimonial-content">
+                        <p>"NepalSMM has been a game-changer for my business. Their services are lightning fast and the quality is exceptional. Highly recommended!"</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-name">Aarav Sharma</div>
+                        <div class="author-title">Fashion Blogger</div>
+                    </div>
+                </div>
+                <div class="testimonial">
+                    <div class="testimonial-content">
+                        <p>"I've tried several SMM panels, but NepalSMM offers the best value for money. Their customer support is outstanding, and they always deliver on time."</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-name">Priya Tamang</div>
+                        <div class="author-title">Small Business Owner</div>
+                    </div>
+                </div>
+                <div class="testimonial">
+                    <div class="testimonial-content">
+                        <p>"Being able to pay with both NPR and crypto makes NepalSMM incredibly convenient. Their services have helped me grow my social media presence significantly."</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-name">Rajesh Thapa</div>
+                        <div class="author-title">Digital Marketer</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="testimonial-controls">
+                <button id="prev-testimonial" aria-label="Previous testimonial"><i class="fas fa-chevron-left"></i></button>
+                <button id="next-testimonial" aria-label="Next testimonial"><i class="fas fa-chevron-right"></i></button>
+            </div>
+        </div>
+    </section>
+
+    <section id="faq" class="faq">
+        <div class="container">
+            <h2>Frequently Asked Questions</h2>
+            <p>Find answers to common questions about our SMM services.</p>
+            
+            <div class="accordion">
+                <div class="accordion-item">
+                    <div class="accordion-header">What is an SMM panel?</div>
+                    <div class="accordion-content">
+                        <p>An SMM (Social Media Marketing) panel is a platform that provides various social media marketing services like followers, likes, views, and more to help grow your social media presence.</p>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <div class="accordion-header">Is it safe to use NepalSMM services?</div>
+                    <div class="accordion-content">
+                        <p>Yes, all our services are safe and comply with the terms of service of social media platforms. We don't require passwords or sensitive information.</p>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <div class="accordion-header">How quickly will I see results?</div>
+                    <div class="accordion-content">
+                        <p>Most orders start processing within minutes of placement. Depending on the service, complete delivery can take anywhere from a few minutes to 24 hours.</p>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <div class="accordion-header">Do you accept Nepali Rupees (NPR)?</div>
+                    <div class="accordion-content">
+                        <p>Yes, we accept payments in NPR through various local payment methods including eSewa, Khalti, ConnectIPS, IME Pay, and bank transfers.</p>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <div class="accordion-header">Which cryptocurrencies do you accept?</div>
+                    <div class="accordion-content">
+                        <p>We accept Bitcoin (BTC), Ethereum (ETH), USDT, and Litecoin (LTC) as payment methods.</p>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <div class="accordion-header">Do you offer refunds?</div>
+                    <div class="accordion-content">
+                        <p>We offer refunds for orders that are not delivered within the specified time frame or if the quality doesn't meet our standards.</p>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <div class="accordion-header">Do I need to share my account password?</div>
+                    <div class="accordion-content">
+                        <p>No, we never ask for your account passwords. We only need the public link to your profile or post.</p>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <div class="accordion-header">Can I become a reseller?</div>
+                    <div class="accordion-content">
+                        <p>Yes, we offer reseller packages with special discounts and API access for seamless integration with your own platform.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>Get In Touch</h2>
+            <p>Have questions or need help? Our support team is available 24/7.</p>
+            
+            <div class="contact-container">
+                <div class="contact-info">
+                    <h3>Contact Information</h3>
+                    <div class="info-item">
+                        <div class="info-icon">
+                            <i class="fab fa-telegram"></i>
+                        </div>
+                        <div class="info-content">
+                            <h4>Telegram</h4>
+                            <p>@NepalSMM_Support</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <div class="info-content">
+                            <h4>Working Hours</h4>
+                            <p>24/7 Customer Support</p>
+                        </div>
+                    </div>
+                    <div class="social-links">
+                        <h3>Follow Us</h3>
+                        <div class="social-icons">
+                            <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                            <a href="#" aria-label="Telegram"><i class="fab fa-telegram-plane"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <h3>Send Us a Message</h3>
+                    <form id="contact-form">
+                        <div class="form-group">
+                            <input type="text" id="name" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="email" placeholder="Your Email" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" id="subject" placeholder="Subject" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea id="message" placeholder="Your Message" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="cta" class="cta">
+        <div class="container">
+            <h2>Ready to Boost Your Social Media Presence?</h2>
+            <p>Join thousands of satisfied customers who trust NepalSMM for their social media marketing needs.</p>
+            <a href="#" id="signup-cta" class="btn btn-primary">Create Free Account</a>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h2>NepalSMM</h2>
+                    <p>Your trusted partner for social media growth.</p>
+                </div>
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#pricing">Pricing</a></li>
+                        <li><a href="#features">Features</a></li>
+                        <li><a href="#faq">FAQ</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h3>Services</h3>
+                    <ul>
+                        <li><a href="#">Instagram Services</a></li>
+                        <li><a href="#">Facebook Services</a></li>
+                        <li><a href="#">YouTube Services</a></li>
+                        <li><a href="#">TikTok Services</a></li>
+                        <li><a href="#">Twitter Services</a></li>
+                        <li><a href="#">Telegram Services</a></li>
+                    </ul>
+                </div>
+                <div class="footer-newsletter">
+                    <h3>Newsletter</h3>
+                    <p>Subscribe to receive updates and offers.</p>
+                    <form id="newsletter-form">
+                        <input type="email" placeholder="Your Email" required>
+                        <button type="submit" class="btn btn-primary">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 NepalSMM. All rights reserved.</p>
+                <div class="footer-bottom-links">
+                    <a href="#">Terms of Service</a>
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Refund Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modal Components -->
+    <div class="modal" id="login-modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2>Login to Your Account</h2>
+            <form id="login-form">
+                <div class="form-group">
+                    <label for="login-username">Username or Email</label>
+                    <input type="text" id="login-username" required>
+                </div>
+                <div class="form-group">
+                    <label for="login-password">Password</label>
+                    <input type="password" id="login-password" required>
+                </div>
+                <div class="form-group remember-me">
+                    <input type="checkbox" id="remember-me">
+                    <label for="remember-me">Remember me</label>
+                </div>
+                <button type="submit" class="btn btn-primary">Login</button>
+                <p class="form-footer">Don't have an account? <a href="#" id="show-register">Register</a></p>
+            </form>
+        </div>
+    </div>
+
+    <div class="modal" id="register-modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2>Create an Account</h2>
+            <form id="register-form">
+                <div class="form-group">
+                    <label for="register-username">Username</label>
+                    <input type="text" id="register-username" required>
+                </div>
+                <div class="form-group">
+                    <label for="register-email">Email</label>
+                    <input type="email" id="register-email" required>
+                </div>
+                <div class="form-group">
+                    <label for="register-password">Password</label>
+                    <input type="password" id="register-password" required>
+                </div>
+                <div class="form-group">
+                    <label for="register-confirm-password">Confirm Password</label>
+                    <input type="password" id="register-confirm-password" required>
+                </div>
+                <div class="form-group terms">
+                    <input type="checkbox" id="agree-terms" required>
+                    <label for="agree-terms">I agree to the Terms of Service and Privacy Policy</label>
+                </div>
+                <button type="submit" class="btn btn-primary">Register</button>
+                <p class="form-footer">Already have an account? <a href="#" id="show-login">Login</a></p>
+            </form>
+        </div>
+    </div>
+
+    <div class="modal" id="service-modal">
+        <div class="modal-content">
+            <span class="close-modal
